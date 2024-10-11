@@ -1,0 +1,16 @@
+# deepsort
+sh inference/MovieShot/scripts/deepsort.sh
+# botsort
+sh inference/MovieShot/scripts/botsort.sh
+# bytetrack
+sh inference/MovieShot/scripts/bytetrack.sh
+# ocsort
+sh inference/MovieShot/scripts/ocsort.sh
+# deepocsort
+sh inference/MovieShot/scripts/deepocsort.sh
+# strongsort
+sh inference/MovieShot/scripts/strongsort.sh
+# hybridsort
+sh inference/MovieShot/scripts/hybridsort.sh
+# botfacesort
+sh inference/MovieShot/scripts/botfacesort.sh

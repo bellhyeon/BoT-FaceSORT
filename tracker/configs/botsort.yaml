@@ -1,0 +1,9 @@
+# Default configuration for BoTSORT from https://github.com/NirAharon/BoT-SORT/blob/251985436d6712aaf682aaaf5f71edb4987224bd/tools/track.py and the original paper
+appearance_thresh: 0.25
+cmc_method: sparseOptFlow   # sparseOptFlow | orb | ecc | none
+match_thresh: 0.8
+new_track_thresh: 0.6
+proximity_thresh: 0.5
+track_buffer: 100
+track_high_thresh: 0.5
+track_low_thresh: 0.1

@@ -1,0 +1,16 @@
+# deepsort
+sh inference/Music/scripts/deepsort.sh
+# botsort
+sh inference/Music/scripts/botsort.sh
+# bytetrack
+sh inference/Music/scripts/bytetrack.sh
+# ocsort
+sh inference/Music/scripts/ocsort.sh
+# deepocsort
+sh inference/Music/scripts/deepocsort.sh
+# strongsort
+sh inference/Music/scripts/strongsort.sh
+# hybridsort
+sh inference/Music/scripts/hybridsort.sh
+# botfacesort
+sh inference/Music/scripts/botfacesort.sh

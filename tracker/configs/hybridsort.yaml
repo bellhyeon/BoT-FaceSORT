@@ -1,0 +1,17 @@
+# HybridSORT config from https://github.com/ymzis69/HybridSORT/blob/master/exps/example/mot/yolox_dancetrack_test_hybrid_sort_reid.py
+TCM_first_step_weight: 1.5
+TCM_byte_step_weight: 1.0
+EG_weight_high_score: 2.8
+EG_weight_low_score: 1.4
+asso_func: hmiou
+conf: 0.1
+delta_t: 3
+det_thresh: 0.6
+inertia: 0.05
+iou_thresh: 0.15
+longterm_reid_weight: 0.0
+longterm_reid_correction_thresh: 0.20
+longterm_reid_correction_thresh_low: 1.0
+max_age: 100  # 30
+min_hits: 3
+use_byte: True

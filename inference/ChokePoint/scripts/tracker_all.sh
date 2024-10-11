@@ -1,0 +1,16 @@
+# deepsort
+sh inference/ChokePoint/scripts/deepsort.sh
+# botsort
+sh inference/ChokePoint/scripts/botsort.sh
+# bytetrack
+sh inference/ChokePoint/scripts/bytetrack.sh
+# ocsort
+sh inference/ChokePoint/scripts/ocsort.sh
+# deepocsort
+sh inference/ChokePoint/scripts/deepocsort.sh
+# strongsort
+sh inference/ChokePoint/scripts/strongsort.sh
+# hybridsort
+sh inference/ChokePoint/scripts/hybridsort.sh
+# botfacesort
+sh inference/ChokePoint/scripts/botfacesort.sh

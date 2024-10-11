@@ -1,0 +1,4 @@
+# Default configuration for BoTSORT from https://github.com/ifzhang/ByteTrack/blob/main/tools/track.py and the original paper
+track_thresh: 0.6  
+track_buffer: 100  # 30
+match_thresh: 0.8

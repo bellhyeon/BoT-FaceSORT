@@ -1,0 +1,10 @@
+python track.py -p test_data/MovieShot/videos/DKzBmRRdPXo.mp4 --conf 0.6 --nms 0.7 --device 0 --tracking-method strongsort --database MovieShot --eval --end-frame 4405
+python track.py -p test_data/MovieShot/videos/HcREWDplGBo.mp4 --conf 0.6 --nms 0.7 --device 0 --tracking-method strongsort --database MovieShot --eval --end-frame 1284
+python track.py -p test_data/MovieShot/videos/iLN9GLRC5is.mp4 --conf 0.6 --nms 0.7 --device 0 --tracking-method strongsort --database MovieShot --eval --end-frame 4340
+python track.py -p test_data/MovieShot/videos/jiQosKWz5IE.mp4 --conf 0.6 --nms 0.7 --device 0 --tracking-method strongsort --database MovieShot --eval --end-frame 3862
+python track.py -p test_data/MovieShot/videos/lqT20npvohw.mp4 --conf 0.6 --nms 0.7 --device 0 --tracking-method strongsort --database MovieShot --eval --end-frame 2558
+python track.py -p test_data/MovieShot/videos/MdwuW8n3JYA.mp4 --conf 0.6 --nms 0.7 --device 0 --tracking-method strongsort --database MovieShot --eval --end-frame 3156
+python track.py -p test_data/MovieShot/videos/mwMmZ8dtWNM.mp4 --conf 0.6 --nms 0.7 --device 0 --tracking-method strongsort --database MovieShot --eval --end-frame 5086
+python track.py -p test_data/MovieShot/videos/Ow8mG8qutkw.mp4 --conf 0.6 --nms 0.7 --device 0 --tracking-method strongsort --database MovieShot --eval --end-frame 2172
+python track.py -p test_data/MovieShot/videos/pLm07s8fnzM.mp4 --conf 0.6 --nms 0.7 --device 0 --tracking-method strongsort --database MovieShot --eval --end-frame 2703
+python track.py -p test_data/MovieShot/videos/SKQWTAjZD_A.mp4 --conf 0.6 --nms 0.7 --device 0 --tracking-method strongsort --database MovieShot --eval --end-frame 2986
