@@ -40,18 +40,25 @@ botfacesort
 ``` -->
 ## Abstract
 Multi-face tracking (MFT) is a subtask of multi-object tracking (MOT) that focuses on detecting and tracking multiple faces across video frames. Modern MOT trackers adopt the Kalman filter (KF), a linear model that estimates current motions based on previous observations. However, these KF-based trackers struggle to predict motions in unconstrained videos with frequent shot changes, occlusions, and appearance variations. To address these limitations, we propose **BoT-FaceSORT**, a novel MFT framework that integrates a shot change detection, a shared feature memory, and an adaptive cascade matching strategy for robust tracking. It detects shot changes by comparing the color histograms of adjacent frames and resets KF states to handle discontinuities. Additionally, we introduce MovieShot, a new benchmark of challenging movie clips to evaluate MFT performance in unconstrained scenarios. We also demonstrate the superior performance of our method compared to existing methods on three benchmarks, while an ablation study validates the effectiveness of each component in handling unconstrained videos.
+> [**BoT-FaceSORT: Bag-of-Tricks for Robust Multi-Face Tracking in Unconstrained Videos**](https://openaccess.thecvf.com/content/ACCV2024/papers/Kim_BoT-FaceSORT_Bag-of-Tricks_for_Robust_Multi-Face_Tracking_in_Unconstrained_Videos_ACCV_2024_paper.pdf)
+> 
+## Pipeline
+<center>
+<img src="assets/pipeline.jpg" width="800"/>
+</center>
 
 ## Data Preparation
-We use [MOT15](http://arxiv.org/abs/1504.01942) format for each dataset as default.
+Note: All dataset follow [MOT15](http://arxiv.org/abs/1504.01942) format as default.
 
-Please make the root dataset path as ``test_data``.
+Make the root dataset path as ``test_data``.
 ```shell
 mkdir test_data
 ```
 
 ### 1. MovieShot Dataset [[Google Drive]](https://drive.google.com/file/d/1AIy81BU6Su4AohDJUtllhud1cBtypbp9/view?usp=sharing)
-- We provide each source of YouTube video ID of MovieShot at utils/constants.py **SEQUENCES** variable. Please download each video in 720p resolution to test_data/MovieShot/videos.
-- Please download the dataset from google drive link on the root of the repo and extract it under test_data/MovieShot.
+- We provide each source of YouTube video ID of MovieShot at ``utils/constants.py`` **SEQUENCES** variable.
+- Download each video in 720p resolution to ``test_data/MovieShot/videos``
+- Then, download the annotation from google drive link on the root of the repo and extract it under ``test_data/MovieShot``.
 
 ```shell
 unzip MovieShot.zip -d test_data/MovieShot && rm MovieShot.zip
@@ -73,7 +80,7 @@ python utils/build_movieshot.py
   ```
 ### 2. Music Dataset [[Paper]](https://link.springer.com/chapter/10.1007/978-3-319-46454-1_26)|[[Project Page]](https://sites.google.com/site/shunzhang876/eccv16-face-tracking)
 - Download videos and ground truths from the project page.
-- Extract videos and ground truths to test/data/Music. (Video: videos/, ground truths: gt/)
+- Extract videos and ground truths to ``test_data/Music``. (Video: videos/, ground truths: gt/)
 - **Important: Please rename stickwithu_gt.xml to PussycatDolls_gt.xml and Tara_gt.xml to T-ara_gt.xml.**"
 ```
 |——test_data
@@ -113,7 +120,7 @@ python utils/build_music.py \
       |——...
 ```
 ### 3. ChokePoint Dataset [[Paper]](https://ieeexplore.ieee.org/document/5981881)|[[Project Page]](https://arma.sourceforge.net/chokepoint/)
-- Please download two sequences(P2E_S5, P2L_S5), which are recorded with a crowded scenario.
+- Please download two sequences(**P2E_S5**, **P2L_S5**), which are recorded with a crowded scenario.
 
 #### Download and extract
 Please download each sequence to the root of the repo.
@@ -168,13 +175,13 @@ pip install -r requirements.txt
 ## Tracking
 For easier tracking, we provide the shell scripts for each experiment.
 
-Scripts are placed in **inference/{Database}/scripts/{tracking-method}.sh**
+Scripts are placed in ``inference/{Database}/scripts/{tracking-method}.sh``
 
-For `Database`, we support **MovieShot**, **Music**, and **ChokePoint**.
+For **Database**, we support **MovieShot**, **Music**, and **ChokePoint**.
 
 For tracking method, we support **botfacesort**, **botfacesort_sc**, **botfacesort_sm**, **botsort**, **bytetrack**, **deepocsort**, **deepsort**, **hybridsort**, **ocsort**, and **strongsort**.
 
-If you want to perform tracking for all trackers in specific Database, Please run inference/{Database}/scripts/tracker_all.sh
+If you want to perform tracking for all trackers in specific Database, Please run **inference/{Database}/scripts/tracker_all.sh**
 
 
 - **Run all trackers on the MovieShot dataset**
@@ -265,7 +272,16 @@ python track.py -p {your_video_path} \
 If you want to show your tracking results, just add `--display` option into command.
 
 ## Citation
-TBA
+If you find this work useful, please consider to cite our paper:
+```
+@InProceedings{10.1007/978-981-96-0901-7_17,
+  title={BoT-FaceSORT: Bag-of-Tricks for Robust Multi-face Tracking in Unconstrained Videos},
+  author={Kim, Jonghyeon and Ju, Chan-Yang and Kim, Gun-Woo and Lee, Dong-Ho}
+  booktitle={Computer Vision -- ACCV 2024},
+  year={2025},
+  pages={278--294}",
+}
+```
 
 ## Acknowledgement
 A large part of the codes, ideas and results are motivated from [BoT-SORT](https://github.com/NirAharon/BoT-SORT), [ByteTrack](https://github.com/ifzhang/ByteTrack), 
